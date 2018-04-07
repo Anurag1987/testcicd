@@ -1,0 +1,278 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"Request": {
+			"type": "object",
+			"properties": {
+				"CaseInformation": {
+					"type": "object",
+					"properties": {
+						"CaseBase": {
+							"type": "object",
+							"properties": {
+								"CaseIdentifier": {
+									"type": "string"
+								},
+								"CaseTypes": {
+									"type": "object",
+									"properties": {
+										"Type": {
+											"type": "object",
+											"properties": {
+												"Code": {
+													"type": "string"
+												},
+												"Value": {
+													"type": "string"
+												}
+											}
+										},
+										"SubType": {
+											"type": "object",
+											"properties": {
+												"Code": {
+													"type": "string"
+												},
+												"Value": {
+													"type": "string"
+												}
+											}
+										},
+										"ExternaTypes": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"Code": {
+														"type": "string"
+													},
+													"Value": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"createdBy": {
+									"type": "string"
+								},
+								"LastModifiedBy": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						},
+						"CaseDetails": {
+							"type": "object",
+							"properties": {
+								"Priority": {
+									"type": "object",
+									"properties": {
+										"Code": {
+											"type": "string"
+										},
+										"Value": {
+											"type": "string"
+										}
+									},
+									"additionalProperties": false
+								},
+								"Description": {
+									"type": "string"
+								},
+								"Services": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"Code": {
+												"type": "string"
+											},
+											"Value": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"CaseStatus": {
+									"type": "object",
+									"properties": {
+										"ChangedBy": {
+											"type": "string"
+										},
+										"Status": {
+											"type": "object",
+											"properties": {
+												"Code": {
+													"type": "string"
+												},
+												"Value": {
+													"type": "string"
+												}
+											}
+										},
+										"EffectiveFrom": {
+											"type": "string"
+										},
+										"EffectiveTo": {
+											"type": "string"
+										},
+										"Reason": {
+											"type": "object",
+											"properties": {
+												"Code": {
+													"type": "string"
+												},
+												"Value": {
+													"type": "string"
+												}
+											}
+										}
+									}
+								},
+								"CaseActivities": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"Identifier": {
+												"type": "array",
+												"items": {
+													"type": "object",
+													"properties": {
+														"IDSource": {
+															"type": "object",
+															"properties": {
+																"Code": {
+																	"type": "string"
+																},
+																"Value": {
+																	"type": "string"
+																}
+															}
+														},
+														"IDType": {
+															"type": "object",
+															"properties": {
+																"Code": {
+																	"type": "string"
+																},
+																"Value": {
+																	"type": "string"
+																}
+															}
+														},
+														"IDValue": {
+															"type": "string"
+														}
+													}
+												}
+											},
+											"Type": {
+												"type": "object",
+												"properties": {
+													"Code": {
+														"type": "string"
+													},
+													"Value": {
+														"type": "string"
+													}
+												}
+											},
+											"SubType": {
+												"type": "object",
+												"properties": {
+													"Code": {
+														"type": "string"
+													},
+													"Value": {
+														"type": "string"
+													}
+												}
+											},
+											"AssignedDepartment": {
+												"type": "string"
+											},
+											"Severity": {
+												"type": "object",
+												"properties": {
+													"Code": {
+														"type": "string"
+													},
+													"Value": {
+														"type": "string"
+													}
+												}
+											},
+											"Notes": {
+												"type": "object",
+												"properties": {
+													"EffectiveDateTime": {
+														"type": "string"
+													},
+													"Note": {
+														"type": "string"
+													},
+													"NoteId": {
+														"type": "string"
+													},
+													"User": {
+														"type": "string"
+													}
+												}
+											},
+											"Status": {
+												"type": "object",
+												"properties": {
+													"Code": {
+														"type": "string"
+													},
+													"Value": {
+														"type": "string"
+													}
+												},
+												"additionalProperties": false
+											}
+										}
+									}
+								},
+								"CaseDates": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"DateRange": {
+												"type": "string"
+											},
+											"DateType": {
+												"type": "object",
+												"properties": {
+													"Code": {
+														"type": "string"
+													},
+													"Value": {
+														"type": "string"
+													}
+												}
+											},
+											"DateValue": {
+												"type": "string"
+											}
+										},
+										"additionalProperties": false
+									}
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"additionalProperties": false
+}

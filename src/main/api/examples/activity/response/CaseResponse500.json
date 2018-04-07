@@ -1,0 +1,21 @@
+{
+  "Response": {
+    "StatusLog": {
+      "Item": [
+        {
+          "Status": "Error",
+          "Code": "ESB_Activity_1005",
+          "Description": "Provided Site Identifier doesn't exist",
+          "Identifier": {
+            "Type": "SiteIdentifier",
+            "Value": "123335"
+          },
+          "Type": "Application",
+          "System": "Salesforce"
+        }
+      ],
+      "MaxItemStatus": "Error",
+      "OutcomeCode": "Failure"
+    }
+  }
+}

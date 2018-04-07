@@ -1,0 +1,21 @@
+# Type definition for the ping response
+description: A default response that returns a sample JSON response which confirms the working status of the current API.
+properties:
+  title:
+    description: The title of the API
+    type: string
+    required: true
+    xml:
+      wrapped: true
+  version:
+    description: The version of the API
+    type: string
+    required: true
+    xml:
+      wrapped: true
+  serverTime:
+    description: Current time of the server that serves the request.
+    type: datetime
+    required: true
+    xml:
+      wrapped: true

@@ -1,0 +1,111 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"Response": {
+			"type": "object",
+			"properties": {
+				"CaseInformation": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"CaseDetails": {
+								"type": "object",
+								"properties": {
+									"CaseActivities": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"Identifier": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"IDSource": {
+																"type": "object",
+																"properties": {
+																	"Code": {
+																		"type": "string"
+																	},
+																	"Value": {
+																		"type": "string"
+																	}
+																}
+															},
+															"IDType": {
+																"type": "object",
+																"properties": {
+																	"Code": {
+																		"type": "string"
+																	},
+																	"Value": {
+																		"type": "string"
+																	}
+																}
+															},
+															"IDValue": {
+																"type": "string"
+															}
+														}
+													}
+												}
+											},
+											"additionalProperties": false
+										}
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"StatusLog": {
+					"type": "object",
+					"properties": {
+						"MaxItemStatus": {
+							"type": "string"
+						},
+						"Item": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"Code": {
+										"type": "string"
+									},
+									"Description": {
+										"type": "string"
+									},
+									"Status": {
+										"type": "string"
+									},
+									"System": {
+										"type": "string"
+									},
+									"Type": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"OutcomeCode": {
+							"type": "string"
+						},
+						"OutcomeText": {
+							"type": "string"
+						},
+						"OutcomeDetails": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"additionalProperties": false
+}

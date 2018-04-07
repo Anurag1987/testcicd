@@ -1,0 +1,175 @@
+#%RAML 1.0
+title: Case Management API
+version: v1
+
+documentation: 
+  - title: Case Management API
+    content: !include documentation/api-doc.md
+
+baseUri: http://{apiMode}-hydrotasmania.com.au/api/casemanagement/{version}
+baseUriParameters:
+  apiMode:
+    description: Specifies the environment on which the API needs to be accessed.
+    type: string
+    enum: [esb-dev,esb-qa,esb]
+    required: true
+
+securitySchemes:
+  basicAuth:
+    type: Basic Authentication
+    describedBy: 
+      headers: 
+        Authorization:
+          description: Used to send a valid username:password token.
+          type: string
+          
+securedBy: basicAuth
+
+protocols: HTTPS
+
+types:
+  ping: !include resourceTypes/ping-response.yaml
+  custom-momentum-req-header: !include schemas/Common/CommonTypes.json
+  custom-momentum-res-header: !include schemas/Common/CommonTypes.json
+
+/ping:
+  get:
+    description: An endpoint that can be used for API health check.
+    headers: 
+      Content-Type:
+        type: string
+        required: true
+        default: application/json
+    responses:
+      200:  
+        body:
+          application/json:
+            type: ping
+            example: !include examples/ping/200.json
+          application/xml:
+            type: ping
+            example: !include examples/ping/200.xml
+
+/activities:
+   post:
+    description: All the activities that will  be created when the corresponding tasks are triggered
+    headers:
+      x-MOM-header:
+            type: custom-momentum-req-header
+            example: !include examples/audit_header/auditHeader.json
+            required: false
+    body:
+      application/json:
+            type: !include schemas/activity/request/CaseRequest.json
+            example: !include examples/activity/request/CreateCaseRequestExample.json
+    
+    responses:
+      200:
+        headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+        body:
+          application/json:
+            type: !include schemas/activity/response/CaseResponse.json
+            example: !include examples/activity/response/CaseResponse.json
+      400:
+        headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+        body:
+          application/json:
+            type: !include schemas/activity/response/CaseResponse.json
+            example: !include examples/activity/response/CaseResponse400.json
+      500:
+          headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+          body:
+            application/json:
+              type: !include schemas/activity/response/CaseResponse.json
+              example: !include examples/activity/response/CaseResponse500.json
+      401:
+          body:
+            application/json:
+              example: |
+               "Unauthorized"
+      403:
+          body:
+            application/json:
+              example: |
+               "Forbidden"
+      405:
+        body:
+          application/json:
+            example: |
+             "Method Not Allowed" 
+   put:
+    description: All the activities that will  be updated when the corresponding tasks are triggered
+    headers:
+      x-MOM-header:
+            type: custom-momentum-req-header
+            example: !include examples/audit_header/auditHeader.json
+            required: false
+    body:
+          application/json:
+            type: !include schemas/activity/request/CaseRequest.json
+            example: !include examples/activity/request/UpdateCaseRequestExample.json
+            
+    responses:
+      200:
+        headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+        body:
+          application/json:
+            type:  !include schemas/activity/response/CaseResponse.json
+            example: !include examples/activity/response/CaseResponse.json
+      400:
+        headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+        body:
+          application/json:
+            type: !include schemas/activity/response/CaseResponse.json
+            example: !include examples/activity/response/CaseResponse400.json
+      500:
+          headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+          body:
+            application/json:
+              type: !include schemas/activity/response/CaseResponse.json
+              example: !include examples/activity/response/CaseResponse500.json
+      401:
+          headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+          body:
+            application/json:
+              example: |
+               "Unauthorized"
+      403:
+          headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+          body:
+            application/json:
+              example: |
+               "Forbidden"
+      405:
+        headers:
+           x-MOM-header:
+            type: custom-momentum-res-header
+            example: !include examples/audit_header/auditHeader.json
+        body:
+          application/json:
+            example: |
+             "Method Not Allowed" 

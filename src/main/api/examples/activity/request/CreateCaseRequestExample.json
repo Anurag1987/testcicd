@@ -1,0 +1,117 @@
+{
+	"Request": {
+		"CaseInformation": {
+			
+			"CaseBase": {
+				"CaseIdentifier": "Orion",
+				"createdBy":"ABC",
+				"LastModifiedBy":"XYZ",
+				
+				"CaseTypes": {
+					"Type": {
+						"Code": "Task Type",
+						"Value": "Internal"
+					},
+					"SubType": {
+						"Code": "SubType",
+						"Value": "Call"
+					},
+					"ExternaTypes": [
+						{
+							"Code": "ChangeRequestType",
+							"Value": "Change Name"
+						}
+					]
+				}
+			},
+			
+			"CaseDetails": {
+				"CaseStatus": {
+					"ChangedBy": "IntegrationUser",
+					"Status": {
+						"Code": "Status",
+						"Value": "Pending"
+					},
+					"EffectiveFrom": "a",
+					"EffectiveTo": "a",
+					"Reason": {
+						
+						"Code": "Moving",
+						"Value": "New location no bijlee at the premise"
+					}
+				},
+				"CaseDates": [
+					{
+						"DateRange": "a",
+						"DateType": {
+							"Code": "ObjectionDate",
+							"Value": "2016-12-22"
+						},
+						"DateValue": "a"
+					},
+					{
+						"DateRange": "a",
+						"DateType": {
+							"Code": "ProposedTransferDate",
+							"Value": "2016-12-22"
+						},
+						"DateValue": "a"
+					}
+				],
+				"Priority": {
+					"Code": "Low",
+					"Value": "Low"
+				},
+				"Description": "Subject900",
+				"Services": [
+						{
+							"Code": "Retailer",
+							"Value": "Retailer888"
+						}
+					],
+				"CaseActivities": [
+					{
+						"Identifier": [
+							{
+								"IDType": {
+									"Code": "BillingAccountNumber",
+									"Value": "1234325"
+								}
+							},
+							
+							{
+								"IDType": {
+									"Code": "SiteIdentifier",
+									"Value": "12345"
+								}
+							},	
+							{
+							"IDType": {
+									"Code": "ChangeRequestID",
+									"Value": "655436378"
+								}	
+							}	
+						],
+						"Type": {
+							"Code": "Activity Type",
+							"Value": "Internal"
+						},
+						"AssignedDepartment": "B2B",
+						
+						"Notes": {
+						
+							"Note": "this is a test note. For example This will contain all the descriptions that is provided by the agent"
+							
+						},
+						"Status": {
+						"Code": "Activity Status",
+						"Value": "Pending"
+						}
+					}
+				]
+				
+			}
+			
+		}
+	}
+}
