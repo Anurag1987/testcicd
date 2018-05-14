@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat "${M2_HOME}//bin//mvn deploy";
+                bat "${M2_HOME}//bin//mvn deploy -DskipTests";
             }
         }
     }
