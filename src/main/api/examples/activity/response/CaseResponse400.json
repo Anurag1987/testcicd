@@ -1,0 +1,17 @@
+{
+  "Response": {
+    "StatusLog": {
+      "Item": [
+        {
+          "Code": "ESB_E3000",
+          "Description": "Schema validation failed due to bad input",
+          "Status": "Error",
+          "Type": "Validation",
+          "System": "ESB"
+        }
+      ],
+      "MaxItemStatus": "Error",
+      "OutcomeCode": "Failure"
+    }
+  }
+}

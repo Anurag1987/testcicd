@@ -1,0 +1,125 @@
+{
+	"Request": {
+		"CaseInformation": {
+			
+			"CaseBase": {
+				"CaseIdentifier": "0124C0000004Mgj",
+				"createdBy":"ABC",
+				"LastModifiedBy":"XYZ",
+				
+				"CaseTypes": {
+					"Type": {
+						"Code": "Task Type",
+						"Value": "Internal"
+					},
+					"SubType": {
+						"Code": "SubType",
+						"Value": "Call"
+					},
+					"ExternaTypes": [
+						{
+							"Code": "ChangeRequestType",
+							"Value": "Change Name"
+						}
+					]
+				}
+			},
+			
+			"CaseDetails": {
+				"CaseStatus": {
+					"ChangedBy": "IntegrationUser",
+					"Status": {
+						"Code": "status",
+						"Value": "Pending"
+					},
+				
+					"Reason": {
+						"Code": "Moving",
+						"Value": "New location no bijlee at the premise"
+					}
+				},
+				"CaseDates": [
+					{
+						"DateRange": "a",
+						"DateType": {
+							"Code": "ObjectionDate",
+							"Value": "2016-12-22"
+						},
+						"DateValue": "a"
+					},
+					{
+						"DateRange": "a",
+						"DateType": {
+							"Code": "ProposedTransferDate",
+							"Value": "2016-12-22"
+						},
+						"DateValue": "a"
+					}
+				],
+				"Priority": {
+					"Code": "Low",
+					"Value": "Low"
+				},
+				"Description": "Subject6",
+				"Services": [
+						{
+							"Code": "Retailer",
+							"Value": "Retailer888"
+						},
+						{
+							"Code": "a",
+							"Value": "a"
+						}
+					],
+				"CaseActivities": [
+					{
+						"Identifier": [
+							{
+								"IDType": {
+									"Code": "BillingAccountNumber",
+									"Value": "1234325"
+								}
+							},
+							
+							{
+								"IDType": {
+									"Code": "SiteIdentifier",
+									"Value": "12345"
+								}
+							},	
+							{
+							"IDType": {
+									"Code": "ChangeRequestID",
+									"Value": "653436378"
+								}	
+							},	
+							{
+							"IDType": {
+									"Code": "SFTaskID",
+									"Value": "00T4C000006FG2Y"
+								}	
+							}	
+						],
+						"Type": {
+							"Code": "Activity Type",
+							"Value": "Internal"
+						},
+						"AssignedDepartment": "B2B",
+						
+						"Notes": {
+						
+							"Note": "this is a test note. For example This will contain all the descriptions that is provided by the agent"
+							
+						},
+						"Status": {
+						"Code": "Activity Status",
+						"Value": "Pending"
+						}
+					}
+				]
+				
+			}
+			
+		}
+	}
+}

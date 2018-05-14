@@ -1,0 +1,23 @@
+{
+  "Response": {
+    "CaseInformation": [
+      {
+        "CaseDetails": {
+          "CaseActivities": [
+            {
+              "Identifier": [
+                {
+                  "IDValue": "00T4C000006ROjgUAG"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "StatusLog": {
+      "MaxItemStatus": "Info",
+      "OutcomeCode": "Success"
+    }
+  }
+}
