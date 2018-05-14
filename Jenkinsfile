@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                bat "${M2_HOME}//bin//mvn clean test";
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                bat "${M2_HOME}//bin//mvn deploy";
             }
         }
     }
