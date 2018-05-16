@@ -76,12 +76,12 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.2.1</version>
 				<configuration>
-					<deploymentType>cloudhub</deploymentType>
-					<workerType>Micro</workerType>
-					<muleVersion>3.8.6</muleVersion>
+					<deploymentType>arm</deploymentType>
 					<username>anuragpimpale008</username>
 					<password>H0r5e007</password>
-					<redeploy>true</redeploy>
+					<target>server-name</target>
+					<!-- One of: server, serverGroup, cluster: -->
+					<targetType>server</targetType>
 					<environment>dev</environment>
 				</configuration>
 				<executions>
