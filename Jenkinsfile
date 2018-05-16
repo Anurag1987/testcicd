@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "${M2_HOME}//bin//mvn clean test";
+                bat "${M2_HOME}//bin//mvn clean test -DvaultKey=${vaultKey}";
             }
         }
         stage('Deploy') {
