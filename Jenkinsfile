@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "${M2_HOME}//bin//mvn clean test -DvaultKey=${vaultKey}";
+                bat "${M2_HOME}//bin//mvn clean test -DvaultKey=${vaultKey} -Denv=dev";
             }
         }
         stage('Deploy') {
             steps {
-                bat "${M2_HOME}//bin//mvn deploy -DskipTests -DvaultKey=${vaultKey}";
+                bat "${M2_HOME}//bin//mvn deploy -DskipTests";
             }
         }
     }
