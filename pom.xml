@@ -76,7 +76,7 @@
 				<targetType>server</targetType> <environment>dev</environment> </configuration> 
 				<executions> <execution> <id>deploy</id> <phase>deploy</phase> <goals> <goal>deploy</goal> 
 				</goals> </execution> </executions> </plugin> -->
-			<plugin>
+			<!--<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.2.1</version>
@@ -85,8 +85,31 @@
 					<username>anuragpimpale008</username>
 					<password>H0r5e007</password>
 					<target>dada-server</target>
-					<!-- One of: server, serverGroup, cluster: -->
+					
 					<targetType>server</targetType>
+					<environment>dev</environment>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>-->
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>2.2.1</version>
+				<configuration>
+					<deploymentType>cloudhub</deploymentType>
+					<workerType>Micro</workerType>
+					<muleVersion>3.8.6</muleVersion>
+					<username>anuragpimpale008</username>
+					<password>H0r5e007</password>
+					<redeploy>true</redeploy>
 					<environment>dev</environment>
 				</configuration>
 				<executions>
