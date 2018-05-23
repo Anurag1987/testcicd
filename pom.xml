@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.test</groupId>
-	<artifactId>devopsDemo_24052018</artifactId>
+	<artifactId>devopsDemo24052018</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule</packaging>
 	<name>Mule testcicd Application</name>
