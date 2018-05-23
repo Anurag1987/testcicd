@@ -76,7 +76,7 @@
 				<targetType>server</targetType> <environment>dev</environment> </configuration> 
 				<executions> <execution> <id>deploy</id> <phase>deploy</phase> <goals> <goal>deploy</goal> 
 				</goals> </execution> </executions> </plugin> -->
-			<!--<plugin>
+			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.2.1</version>
@@ -84,7 +84,7 @@
 					<deploymentType>arm</deploymentType>
 					<username>anuragpimpale008</username>
 					<password>H0r5e007</password>
-					<target>dada-server</target>
+					<target>server-devopsdemo</target>
 					
 					<targetType>server</targetType>
 					<environment>dev</environment>
@@ -98,8 +98,8 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>-->
-			<plugin>
+			</plugin>
+			<!--<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.2.1</version>
@@ -121,7 +121,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 
 			
 			<plugin>
